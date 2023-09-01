@@ -3,12 +3,59 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.10.5/font/bootstrap-icons.css">
+  <link rel="stylesheet" href="style.css">
   <title>Adera</title>
 </head>
 <body>
   <main>
-    <h1>Teste</h1>
-    <p>Hello World</p>
+    <header>
+      <ul class="items-desktop">
+        <li>
+          <span>Home</span>
+        </li>
+        <li>
+          <span>Soluções</span>
+        </li>
+        <li><img src="./assets/image/logotipo.png" class="img-logo" alt="Adera Logo"></li>
+        <li>
+          <span>Quem Somos</span>
+        </li>
+        <li>
+          <span>Contato</span>
+        </li>
+      </ul>
+      <i class="bi bi-list" id="hamburguer-button" style="font-size: 3rem;"></i>
+    </header>
+    <div class="mobile-menu" id="menu">
+      <ul>
+        <li><img src="./assets/image/icone_branco.png" alt="Adera Logo" style="max-width: 6rem; aspect-ratio: 1;"></li>
+        <li>
+          <span>Home</span>
+        </li>
+        <li>
+          <span>Soluções</span>
+        </li>
+        <li>
+          <span>Quem Somos</span>
+        </li>
+        <li>
+          <span>Contato</span>
+        </li>
+      </ul>
+    </div>
+    <div>
+      <div class="home">
+        <div class="home-ilustration"></div>
+        <div class="home-text">
+          <span class="font-ubuntu font-lg">
+            <span style="font-weight: 700;">Potencializando a Experiência:</span> 
+            Monitoramento Inteligente para Totens de Futuro.
+          </span>
+        </div>
+      </div>
+    </div>
   </main>
+  <script src="script.js"></script>
 </body>
 </html>

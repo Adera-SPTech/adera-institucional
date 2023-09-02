@@ -1,0 +1,167 @@
+@import url('https://fonts.googleapis.com/css2?family=Ubuntu:wght@400;700&display=swap');
+
+* {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+
+  border: 1px solid rgba(0, 0, 0, .2);
+}
+
+:root {
+  --header-height: 10rem;
+}
+
+.mobile-menu {
+  display: none;
+}
+
+body {
+  overflow-x: hidden;
+}
+
+header {
+  height: var(--header-height);
+  min-width: 100vw;
+
+  /* padding: 1rem; */
+
+  box-shadow: 0px 3px 5px 0px rgba(0,0,0,0.25);
+  /* border-radius: 1rem; */
+}
+
+header .img-logo {
+  max-height: 8rem;
+  height: 100%;
+}
+
+header > ul {
+  margin: auto 0;
+  list-style: none;
+  
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+  gap: 2.5rem;
+}
+
+header span {
+  font-family: 'Ubuntu', sans-serif;
+  font-weight: 700;
+  font-size: 2rem;
+  width: 13ch;
+  text-align: center;
+
+  cursor: pointer;
+  text-transform: uppercase;
+}
+
+header > i {
+  display: none;
+  position: absolute;
+  right: 1.5rem;
+}
+
+.home {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-around;
+  align-items: center;
+
+  height: calc(95vh - var(--header-height));
+}
+
+.home > .home-text, 
+.home > .home-ilustration {
+  width: 40vw;
+
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  text-align: center;
+}
+
+.font-ubuntu {
+  font-family: 'Ubuntu', sans-serif;
+}
+
+.font-lg {
+  font-size: 3rem;
+}
+
+@media (max-width: 991px) {
+
+  :root {
+    --header-height: 7rem;
+  }
+
+  header > .items-desktop > li > span {
+    display: none;
+  }
+  header > i {
+    display: block;
+    position: absolute;
+  }
+
+  header > .items-desktop > li > .img-logo {
+    max-height: 5rem;
+  }
+
+  .mobile-menu {
+    backdrop-filter: blur(2px);
+    height: 100vh;
+    width: 100vw;
+    display: block;
+    top: 0;
+    position: absolute;
+    right: -100vw;
+    
+    display: flex;
+    justify-content: flex-end;
+    
+    transition: right ease-in-out 300ms;
+  }
+  
+  .open {
+    right: 0;
+  }
+  
+  .mobile-menu > ul {
+    padding: 2rem;
+    width: 75vw;
+    background: #252525;
+    color: #fefefe;
+    list-style: none;
+    font-family: 'Ubuntu', sans-serif;
+    font-size: 1.5rem;
+
+    display: flex;
+    flex-direction: column;
+    gap: 2rem;
+  }
+
+  .home {
+    flex-direction: column-reverse;
+  }
+
+  .home > .home-text{
+    padding: 1rem;
+    width: 100vw;
+  }
+
+  .home > .home-text > span{
+    max-width: 30ch;
+    margin: 0 auto;
+  }
+
+  .font-lg {
+    font-size: 1.5rem;
+  }
+}
+
+@media (min-width: 500px) and (max-width: 991px){
+  .font-lg {
+    font-size: 2rem;
+  }
+}

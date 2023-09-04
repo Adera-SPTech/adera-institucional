@@ -13,6 +13,7 @@
 }
 
 .mobile-menu {
+  display: none;
   overflow-x: hidden;
   transition: all ease-in-out 300ms;
 }
@@ -177,6 +178,7 @@ header > i {
 
   .home > .home-ilustration {
     width: 80vw;
+    max-height: 640px;
   }
 
   .home > .home-text{

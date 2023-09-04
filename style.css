@@ -5,7 +5,7 @@
   margin: 0;
   box-sizing: border-box;
 
-  border: 1px solid rgba(0, 0, 0, .2);
+  /* border: 1px solid rgba(0, 0, 0, .2); */
 }
 
 :root {
@@ -13,6 +13,11 @@
 }
 
 .mobile-menu {
+  overflow-x: hidden;
+  transition: all ease-in-out 300ms;
+}
+
+.blur {
   display: none;
 }
 
@@ -24,9 +29,13 @@ header {
   height: var(--header-height);
   min-width: 100vw;
 
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
   /* padding: 1rem; */
 
-  box-shadow: 0px 3px 5px 0px rgba(0,0,0,0.25);
+  /* box-shadow: 0px 3px 5px 0px rgba(0,0,0,0.25); */
   /* border-radius: 1rem; */
 }
 
@@ -46,12 +55,14 @@ header > ul {
   gap: 2.5rem;
 }
 
-header span {
+header > ul > li > span {
   font-family: 'Ubuntu', sans-serif;
   font-weight: 700;
   font-size: 2rem;
-  width: 13ch;
+  min-width: 13ch;
   text-align: center;
+
+  display: block;
 
   cursor: pointer;
   text-transform: uppercase;
@@ -66,7 +77,7 @@ header > i {
 .home {
   display: flex;
   flex-direction: row;
-  justify-content: space-around;
+  justify-content: center;
   align-items: center;
 
   height: calc(95vh - var(--header-height));
@@ -96,6 +107,10 @@ header > i {
     --header-height: 7rem;
   }
 
+  body {
+    overflow-x: hidden;
+  }
+
   header > .items-desktop > li > span {
     display: none;
   }
@@ -108,41 +123,60 @@ header > i {
     max-height: 5rem;
   }
 
-  .mobile-menu {
-    backdrop-filter: blur(2px);
-    height: 100vh;
+  .blur {
     width: 100vw;
-    display: block;
-    top: 0;
+    height: 100vh;
+
     position: absolute;
+    top: 0;
+    left: 0;
+
+    backdrop-filter: blur(2px);
+  }
+
+  .shown {
+    display: block;
+  }
+
+  .mobile-menu {
+    display: block;
+
+    background-color: #2e2e2e;
+
+    height: 100vh;
+    width: 75vw;
+
+    position: fixed;
+    top: 0;
     right: -100vw;
-    
-    display: flex;
-    justify-content: flex-end;
-    
+
+    padding: 2rem;
     transition: right ease-in-out 300ms;
   }
-  
+
+  .mobile-menu img {
+    max-width: 6rem;
+  }
+
   .open {
     right: 0;
   }
-  
+
   .mobile-menu > ul {
-    padding: 2rem;
-    width: 75vw;
-    background: #252525;
-    color: #fefefe;
     list-style: none;
+
+    color: #fefefe;
     font-family: 'Ubuntu', sans-serif;
     font-size: 1.5rem;
-
-    display: flex;
-    flex-direction: column;
-    gap: 2rem;
+    line-height: 3rem;
   }
 
   .home {
     flex-direction: column-reverse;
+  }
+
+  .home > .home-ilustration {
+    width: 80vw;
   }
 
   .home > .home-text{

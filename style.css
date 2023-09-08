@@ -106,6 +106,46 @@ header > i {
   font-size: 3rem;
 }
 
+footer {
+  display: flex;
+  flex-direction: column;
+
+}
+
+.footer-horizontal {
+  display: flex;
+  flex-direction: row;
+  justify-content: flex-start;
+  gap: 2rem;
+  background-color: #2e2e2e;
+  padding: 2rem;
+}
+
+.footer-links {
+  min-width: 6rem;
+  list-style: none;
+
+  font-family: 'Ubuntu', sans-serif;
+  color: #fefefe;
+  font-size: 1.2rem;
+}
+
+.footer-links > li {
+  margin: .8rem .3rem;
+}
+
+.footer-links > li:nth-child(1) {
+  font-weight: bold;
+  margin: 0;
+  font-size: 1.4rem;
+}
+
+.copyright {
+  color: #fefefe;
+  font-family: 'Ubuntu', sans-serif;
+  font-weight: bold;
+}
+
 @media (max-width: 991px) {
 
   :root {

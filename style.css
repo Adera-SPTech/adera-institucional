@@ -75,17 +75,21 @@ header > i {
   right: 1.5rem;
 }
 
-.home {
+.session {
   display: flex;
   flex-direction: row;
   justify-content: center;
   align-items: center;
 
-  height: calc(95vh - var(--header-height));
+  min-height: calc(95vh - var(--header-height));
 }
 
-.home > .home-text, 
-.home > .home-ilustration {
+.reverse {
+  flex-direction: row-reverse;
+}
+
+.session > .session-text, 
+.session > .session-ilustration {
   width: 40vw;
 
   display: flex;
@@ -172,21 +176,21 @@ header > i {
     line-height: 3rem;
   }
 
-  .home {
+  .session {
     flex-direction: column-reverse;
   }
 
-  .home > .home-ilustration {
+  .session > .session-ilustration {
     width: 80vw;
     max-height: 640px;
   }
 
-  .home > .home-text{
+  .session > .session-text{
     padding: 1rem;
     width: 100vw;
   }
 
-  .home > .home-text > span{
+  .session > .session-text > span{
     max-width: 30ch;
     margin: 0 auto;
   }

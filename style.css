@@ -105,6 +105,55 @@ header > i {
 .font-lg {
   font-size: 3rem;
 }
+::placeholder {
+  color: #fff;
+}
+#contacts {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  background-color: rgba(90, 68, 235,0.8);
+  color: #fff;
+  font-family: 'Ubuntu', sans-serif;
+  padding: 4vh 0;
+}
+
+#contacts p {
+  width: 40vw;
+  text-align: center;
+}
+
+#contacts textarea {
+  font-family: 'Ubuntu', sans-serif;
+  width: 35vw;
+  height: 20vh;
+  border-radius: 12px;
+  outline: none;
+  border: 2px solid #fff;
+  background: none;
+  padding: 1vh;
+  margin: 2vh 0;
+}
+
+#contacts input {
+  border: none;
+  width: 35vw;
+  background: none;
+  outline: none;
+  border-bottom: 2px solid #fff;
+  padding: 0 0 3px 5px;
+  margin: 2vh 0;
+}
+
+#contacts button {
+  border: none;
+  width: 20vw;
+  height: 5vh;
+  border-radius: 99px;
+  color:  rgba(90, 68, 235,0.8);
+  font-weight: bold;
+  transition: .2s;
+}
 
 @media (max-width: 991px) {
 
@@ -197,6 +246,19 @@ header > i {
 
   .font-lg {
     font-size: 1.5rem;
+  }
+  #contacts p {
+    width: 80vw;
+  }
+  #contacts textarea {
+    width: 80vw;
+  }
+  #contacts input {
+    width: 80vw;
+  }
+  #contacts button {
+    width: 40vw;
+    transition: .2s;
   }
 }
 

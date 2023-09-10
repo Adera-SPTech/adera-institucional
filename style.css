@@ -18,6 +18,7 @@
   transition: all ease-in-out 300ms;
 }
 
+
 .blur {
   display: none;
 }
@@ -45,10 +46,10 @@ header .img-logo {
   height: 100%;
 }
 
-header > ul {
+header>ul {
   margin: auto 0;
   list-style: none;
-  
+
   display: flex;
   flex-direction: row;
   justify-content: center;
@@ -56,7 +57,7 @@ header > ul {
   gap: 2.5rem;
 }
 
-header > ul > li > span {
+header>ul>li>span {
   font-family: 'Ubuntu', sans-serif;
   font-weight: 700;
   font-size: 2rem;
@@ -69,7 +70,7 @@ header > ul > li > span {
   text-transform: uppercase;
 }
 
-header > i {
+header>i {
   display: none;
   position: absolute;
   right: 1.5rem;
@@ -88,8 +89,8 @@ header > i {
   flex-direction: row-reverse;
 }
 
-.session > .session-text, 
-.session > .session-ilustration {
+.session>.session-text,
+.session>.session-ilustration {
   width: 40vw;
 
   display: flex;
@@ -156,15 +157,16 @@ footer {
     overflow-x: hidden;
   }
 
-  header > .items-desktop > li > span {
+  header>.items-desktop>li>span {
     display: none;
   }
-  header > i {
+
+  header>i {
     display: block;
     position: absolute;
   }
 
-  header > .items-desktop > li > .img-logo {
+  header>.items-desktop>li>.img-logo {
     max-height: 5rem;
   }
 
@@ -207,7 +209,7 @@ footer {
     right: 0;
   }
 
-  .mobile-menu > ul {
+  .mobile-menu>ul {
     list-style: none;
 
     color: #fefefe;
@@ -220,19 +222,21 @@ footer {
     flex-direction: column-reverse;
   }
 
-  .session > .session-ilustration {
+  .session>.session-ilustration {
     width: 80vw;
     max-height: 640px;
   }
 
-  .session > .session-text{
+  .session>.session-text {
     padding: 1rem;
     width: 100vw;
+
   }
 
-  .session > .session-text > span{
+  .session>.session-text>span {
     max-width: 30ch;
     margin: 0 auto;
+
   }
 
   .font-lg {
@@ -240,8 +244,34 @@ footer {
   }
 }
 
-@media (min-width: 500px) and (max-width: 991px){
+@media (min-width: 500px) and (max-width: 991px) {
   .font-lg {
     font-size: 2rem;
   }
+}
+
+#Icones {
+  width: 179px;
+  height: 170px;
+  border-radius: 10px;
+  margin: 35px;
+  margin-left: 85px;
+}
+
+.cardSolucoes {
+  justify-content: space-evenly;
+  text-align: center;
+  border-color: transparent;
+  width: 350px;
+}
+
+
+.session-reverse {
+  display: flex;
+  justify-content: space-evenly;
+  list-style: none;
+}
+
+.session-text-solucao {
+  position: absolute;
 }
